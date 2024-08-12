@@ -1,18 +1,76 @@
-<head>
-    <style>
-        html {
-            display: block;
+<script>
+    function reversearr(a) {
+
+        var len = a.length;
+        var sum = 0;
+        for (var i = 0; i < a.length; i++) {
+            sum += a[i];
         }
 
-        html:focus {
-            outline: none;
+        console.log(sum)
+    }
+
+    function reverse(number) {
+        let strNumber = number.toString();
+        var reversedStr = ""
+        for (var i = strNumber.length - 1; i >= 0; i--) {
+            reversedStr += strNumber[i];
         }
-    </style>
-</head>
+        if (reversedStr === strNumber) {
+            console.log("this is the palindrome")
+        }
+        else {
+            console.log("not a palindrome")
+        }
 
-<body>
 
-    <h1>This is a heading</h1>
-    <p>This is a paragraph.</p>
+        return reversedStr;
 
-</body>
+
+
+    }
+
+    function armstrong(number) {
+
+        let numbers = number.toString()
+        console.log(numbers)
+        var total = 0
+
+        for (i = 0; i <= numbers.length - 1; i++) {
+            let cubing = parseInt(numbers[i]);
+            var cubevalue = (cubing * cubing * cubing)
+            total += cubevalue
+
+
+
+
+        }
+        if (total === number) {
+            console.log("this is armstrong!")
+        }
+        else {
+            console.log("not an armstrong")
+        }
+        return total;
+    }
+
+
+    function primenumber(number) {
+
+        var checkingnum = number
+        for (i = 2; i < number; i++) {
+            if (number % i === 0) {
+                console.log(number, "is not prime and it isdivisble by", i)
+                return
+            }
+
+
+        }
+    }
+</script>
+
+<button onclick="reversearr([13,24,234,21])">click here</button>
+<button onclick="reverse(1221)">click here</button>
+<button onclick="armstrong(153)">click here</button>
+<button onclick="primenumber(19)">primenumber</button>
+<p></p>
