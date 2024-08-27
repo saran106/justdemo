@@ -55,7 +55,9 @@
     }
 
 
+
     function primenumber(number) {
+
 
         var checkingnum = number
         for (i = 2; i < number; i++) {
@@ -67,10 +69,79 @@
 
         }
     }
+
+    function reversestring(x) {
+
+        let dummy = "";
+        let gettingvalue = x.toString();
+
+        for (i = gettingvalue.length - 1; i >= 0; i--) {
+            dummy += gettingvalue[i]
+        }
+
+        return dummy
+
+        cosnole.log("return", dummy)
+
+    }
+
+    function armstrongs(x) {
+
+        let getting = x.toString();
+        let get = '';
+        let getting_rmstrong = '';
+        let arm = 0;
+
+        for (i = 0; i < getting.length; i++) {
+
+            get = parseInt(getting[i])
+            getting_rmstrong = (get * get * get);
+            arm += getting_rmstrong
+
+
+        }
+        return arm
+    }
+
+
+    function forreversearray(x) {
+
+        let j = [];
+        let arrays = x
+        let star = '';
+
+
+        for (let i = arrays.length - 1; i >= 0; i--) {
+
+            j.push(arrays[i])
+        }
+        return j
+
+    }
+
+    function primenum(x) {
+
+        let num = x;
+        let count = 0
+        for (i = 1; i <= x; i++) {
+            if (num % i == 0) {
+                count += 1  
+            }
+        }
+        return count
+
+        if(count>2){
+            console.log("this num is not palindrome")
+        }
+        else{
+            console.log("palindrome ")
+        }
+    }
+
 </script>
 
-<button onclick="reversearr([13,24,234,21])">click here</button>
+<button onclick="forreversearray([13,24,234,21])">click here</button>
 <button onclick="reverse(1221)">click here</button>
-<button onclick="armstrong(153)">click here</button>
-<button onclick="primenumber(19)">primenumber</button>
-<p></p>
+<button onclick="primenum(7)">INdian</button>
+<button onclick="reversestring('star')">primenumber</button>
+<p>helloooooooooo</p>
